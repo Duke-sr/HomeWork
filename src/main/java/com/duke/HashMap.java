@@ -19,9 +19,12 @@ public class HashMap<K, V> implements Map<K, V> {
     }
 
     // Хэш функция
+//    private int hash(Object key) {
+//        int h;
+//        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
+//    }
     private int hash(Object key) {
-        int h;
-        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
+        return (key == null) ? 0 : ((key.hashCode()) ^ (key.hashCode() >>> 16));
     }
 
     // вставка элемента (с перезаписью при совпадении ключа)

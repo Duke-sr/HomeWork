@@ -11,7 +11,6 @@ public class Main {
         map2.remove(1);
 
         System.out.println(map.get("HBHBKBKJBK"));
-        System.out.println(map2.get(1));
         System.out.println(map2.get(2));
     }
 }
